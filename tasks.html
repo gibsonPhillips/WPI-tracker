@@ -10,21 +10,32 @@
     </head>
 
     <body>
-        <h2>
-            task list
-        </h2>
-        <p>
-            list of tasks
-        </p>
-        <p>
-            add button (float over page dynamically)
-        </p>
+
+        <div class="header">
+            <h2>task list</h2>
+            <span class="addBtn" id="addItem">Add</span>
+        </div>
+
+        <ul id="mainTasks">
+            <li>list of tasks</li>
+            <li>add button (float over page dynamically)</li>
+        </ul>
+
+        <!-- The all seeing add button -->
+        <button class="add-button">+</button>
+
     </body>
 
 
 
 </div>
 <script type="module">
+
+    // Create a new list item when clicking on the "Add" button
+    var newElementListener = document.getElementById("addItem") // event listening the right way
+    newElementListener.addEventListener('click', function () {
+        newElement()
+    }, false);
     function newElement() {
         var li = document.createElement("li");
         var inputValue = document.getElementById("myInput").value;
