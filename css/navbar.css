@@ -1,0 +1,65 @@
+#navbar {
+    /* where */
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    /* colour */
+    background-color: #222;
+    transition: 0.1s;
+}
+
+
+#nav-tasks {
+    padding: 1%;
+    margin-left: 10%;
+    border: bottom 2px;
+    border-top-left-radius: 7.5px;
+    transition: 0.2s;
+
+    /* text */
+    color: white;
+    text-decoration: none;
+    font-size: 20pt;
+
+    /* mbpo */
+    margin-left: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#nav-class {
+    padding: 1%;
+    margin-right: 10%;
+    border-top-right-radius: 7.5px;
+    transition: 0.2s;
+
+    /* text */
+    color: white;
+    text-decoration: none;
+    font-size: 20pt;
+
+    /* mbpo */
+    margin-right: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+#nav-tasks:hover {
+    background-color: #4a4a4a;
+}
+
+#nav-class:hover {
+    background-color: #4a4a4a;
+}
+
+/* shows the current page in navbar */
+.active {
+    border-bottom: 4px solid #4a4a4a;
+}

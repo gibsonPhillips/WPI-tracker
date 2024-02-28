@@ -3,26 +3,49 @@
 <div id="container">
 
     <head>
+        <link rel="stylesheet" type="text/css" href="css/tasks.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+
 
         <meta name="viewport" content="width=device-width, user-scalable=no" />
         <title> tasks </title>
+        <style>
+
+        </style>
     </head>
 
-    <body>
+    <header>
+        <div id="navbar">
+            <a id="nav-tasks" href="tasks.html" class="active">Tasks</a>
+            <a id="nav-class" href="classes.html">Classes</a>
+        </div>
+    </header>
 
-        <div class="header">
-            <h2>task list</h2>
-            <span class="addBtn" id="addItem">Add</span>
+    <body>
+        <div id="main">
+            <ul id="mainTasks">
+                <li class="task">
+                    <div id="task-name">This is a task</div>
+                    <div class="hbox" style="gap: 5%;">
+                        <div id="task-due-date">24/feb/24</div>
+                        <div id="hi-welcome-to-chilis">🌶️🌶️🌶️</div>
+                    </div>
+                </li>
+                <li class='task'>
+                    <div id="task-name">This is a task</div>
+                    <div class="hbox" style="gap: 5%;">
+                        <div id="task-due-date">24/feb/24</div>
+                        <div id="hi-welcome-to-chilis">🌶️🌶️🌶️</div>
+                    </div>
+                </li>
+            </ul>
         </div>
 
-        <ul id="mainTasks">
-            <li>list of tasks</li>
-            <li>add button (float over page dynamically)</li>
-        </ul>
-
         <!-- The all seeing add button -->
-        <button class="add-button">+</button>
+        <button id="add-button">
+            <p id="plus">+</p>
+        </button>
 
     </body>
 
@@ -48,11 +71,11 @@
         }
         document.getElementById("myInput").value = "";
 
-        var span = document.createElement("SPAN");
+        var div = document.createElement("SPAN");
         var txt = document.createTextNode("\u00D7");
-        span.className = "close";
-        span.appendChild(txt);
-        li.appendChild(span);
+        div.className = "close";
+        div.appendChild(txt);
+        li.appendChild(div);
 
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function () {
