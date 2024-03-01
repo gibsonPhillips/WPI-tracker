@@ -8,7 +8,7 @@
         <link rel="stylesheet" type="text/css" href="css/navbar.css" />
 
 
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" />
         <title> tasks </title>
         <style>
 
@@ -50,51 +50,69 @@
     </body>
 
 
+    <!-- The add task popup page -->
+    <div class="box">
+        <a href="#popup-box">
+            Click to Open Popup Box !
+        </a>
+    </div>
+    <div id="popup-box" class="modal">
+        <div class="content">
+            <h1 style="color: green;">
+                Add Task!
+            </h1>
+            <div class="hbox" id="labels-and-fields">
 
-</div>
-<script type="module">
+                <a href="#" class="box-close">
+                    ×
+                </a>
+            </div>
+        </div>
 
-    // Create a new list item when clicking on the "Add" button
-    var newElementListener = document.getElementById("addItem") // event listening the right way
-    newElementListener.addEventListener('click', function () {
-        newElement()
-    }, false);
-    function newElement() {
-        var li = document.createElement("li");
-        var inputValue = document.getElementById("myInput").value;
-        var t = document.createTextNode(inputValue);
-        li.appendChild(t);
-        if (inputValue === '') {
-            alert("You must write something!");
-        } else {
-            document.getElementById("myUL").appendChild(li);
+    </div>
+    <script type="module">
+
+        // Create a new list item when clicking on the "Add" button
+        var newElementListener = document.getElementById("addItem") // event listening the right way
+        newElementListener.addEventListener('click', function () {
+            newElement()
+        }, false);
+        function newElement() {
+            var li = document.createElement("li");
+            var inputValue = document.getElementById("myInput").value;
+            var t = document.createTextNode(inputValue);
+            li.appendChild(t);
+            if (inputValue === '') {
+                alert("You must write something!");
+            } else {
+                document.getElementById("myUL").appendChild(li);
+            }
+            document.getElementById("myInput").value = "";
+
+            var div = document.createElement("SPAN");
+            var txt = document.createTextNode("\u00D7");
+            div.className = "close";
+            div.appendChild(txt);
+            li.appendChild(div);
+
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function () {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
         }
-        document.getElementById("myInput").value = "";
 
-        var div = document.createElement("SPAN");
-        var txt = document.createTextNode("\u00D7");
-        div.className = "close";
-        div.appendChild(txt);
-        li.appendChild(div);
-
+        // remove checked item
+        var close = document.getElementsByClassName("close");
+        var i;
         for (i = 0; i < close.length; i++) {
             close[i].onclick = function () {
                 var div = this.parentElement;
                 div.style.display = "none";
             }
         }
-    }
 
-    // remove checked item
-    var close = document.getElementsByClassName("close");
-    var i;
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function () {
-            var div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
-
-</script>
+    </script>
 
 </html>
