@@ -6,6 +6,8 @@
         <link rel="stylesheet" type="text/css" href="css/tasks.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css" />
         <link rel="stylesheet" type="text/css" href="css/navbar.css" />
+        <link rel="stylesheet" type="text/css" href="css/addTask.css" />
+
 
 
         <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" />
@@ -36,7 +38,7 @@
                     <div id="task-name">This is a task</div>
                     <div class="hbox" style="gap: 5%;">
                         <div id="task-due-date">24/feb/24</div>
-                        <div id="hi-welcome-to-chilis">🌶️🌶️🌶️</div>
+                        <div id="hi-welcome-to-chilis">🌶️🌶️</div>
                     </div>
                 </li>
             </ul>
@@ -44,28 +46,23 @@
 
         <!-- The all seeing add button -->
         <button id="add-button">
-            <p id="plus">+</p>
+            <a href="#popup-box" id="plus">+</a>
         </button>
 
     </body>
 
 
     <!-- The add task popup page -->
-    <div class="box">
-        <a href="#popup-box">
-            Click to Open Popup Box !
-        </a>
-    </div>
+
+
     <div id="popup-box" class="modal">
         <div class="content">
-            <h1 style="color: green;">
+            <h1 id="add-task-title">
                 Add Task!
             </h1>
             <div class="hbox" id="labels-and-fields">
 
-                <a href="#" class="box-close">
-                    ×
-                </a>
+                <a href="#" class="box-close">×</a>
             </div>
         </div>
 

@@ -26,6 +26,9 @@ div#main {
     font-size: 60pt;
     min-height: 0px;
     margin: 0px;
+
+    text-decoration: none;
+    color: white;
 }
 
 ul li {
