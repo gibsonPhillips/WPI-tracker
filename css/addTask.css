@@ -19,7 +19,7 @@ p {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(254, 126, 126, 0.7);
+    background: rgba(146, 146, 146, 0.7);
     transition: all 0.4s;
     visibility: hidden;
     opacity: 0;
