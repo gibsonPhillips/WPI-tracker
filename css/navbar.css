@@ -30,6 +30,7 @@
 
     /* mbpo */
     margin-left: 15%;
+    border-bottom: 4px solid #222;
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -47,6 +48,7 @@
 
     /* mbpo */
     margin-right: 15%;
+    border-bottom: 4px solid #222;
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -61,5 +63,5 @@
 
 /* shows the current page in navbar */
 .active {
-    border-bottom: 4px solid #4a4a4a;
+    border-bottom: 4px solid #4a4a4a !important;
 }
