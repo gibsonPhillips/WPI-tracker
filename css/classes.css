@@ -1,0 +1,63 @@
+#classes-header-classes {
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+
+
+.container {
+    max-width: 60em;
+    margin: 0 auto;
+    padding-top: 3em;
+}
+
+.progress-segment {
+    display: flex;
+    margin-bottom: 4em;
+}
+
+.progress-segment div {
+    width: 100%;
+    background-color: lightgray;
+    margin-right: 2px;
+    height: 8px;
+}
+
+:first-child {
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+:last-child {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.nr-grade {
+    background: red !important;
+}
+
+.gold-common {
+    background: gold !important;
+}
+
+.c-grade {
+    background: orange !important;
+}
+
+.b-grade {
+    background: yellow !important;
+}
+
+.yellow-light-common {
+    background: lightyellow !important;
+}
+
+.green-light-common {
+    background: lightgreen !important;
+}
+
+.a-grade {
+    background: green !important;
+}
