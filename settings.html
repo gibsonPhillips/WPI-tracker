@@ -1,35 +1,96 @@
 <!DOCTYPE html>
 <html>
-<div id="container">
 
-    <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+<head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/settings.css" />
 
-        <meta name="viewport" content="width=device-width, user-scalable=no" />
-        <title> settings </title>
-    </head>
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <title>Settings</title>
+</head>
 
-    <body>
-        <h2>
-            settings
-        </h2>
+<body>
 
-        <ul>colours</ul>
-        <ul>semesters or quarters</ul>
-        <ul>notification settings</ul>
-        <ul>default dashboard page</ul>
-        <ul>time zone</ul>
-        <ul>calendar integration</ul>
-        <ul>workday integration</ul>
-        <ul>canvas api?</ul>
+    <div id="container">
 
-    </body>
+        <h2>Settings</h2>
 
 
 
-</div>
-<script type="module">
+        <form id="settings-form">
+            <label for="notification">Notification settings:</label>
+            <select id="notification">
+                <option value="on">On</option>
+                <option value="off">Off</option>
+            </select>
 
-</script>
+            <label for="dashboard">Default dashboard page:</label>
+            <select id="dashboard">
+                <option value="tasks">tasks</option>
+                <option value="classes">classes</option>
+            </select>
+
+            <label for="timezone">Time zone:</label>
+            <select id="timezone">
+                <option value="-12">UTC-12</option>
+                <option value="-11">UTC-11</option>
+                <option value="-10">UTC-10</option>
+                <option value="-9">UTC-9</option>
+                <option value="-8">UTC-8</option>
+                <option value="-7">UTC-7</option>
+                <option value="-6">UTC-6</option>
+                <option value="-5">UTC-5</option>
+                <option value="-4">UTC-4</option>
+                <option value="-3">UTC-3</option>
+                <option value="-2">UTC-2</option>
+                <option value="-1">UTC-1</option>
+                <option value="0">UTC+0</option>
+                <option value="1">UTC+1</option>
+                <option value="2">UTC+2</option>
+                <option value="3">UTC+3</option>
+                <option value="4">UTC+4</option>
+                <option value="5">UTC+5</option>
+                <option value="6">UTC+6</option>
+                <option value="7">UTC+7</option>
+                <option value="8">UTC+8</option>
+                <option value="9">UTC+9</option>
+                <option value="10">UTC+10</option>
+                <option value="11">UTC+11</option>
+                <option value="12">UTC+12</option>
+                <option value="13">UTC+13</option>
+                <option value="14">UTC+14</option>
+
+
+
+            </select>
+
+            <button type="submit">Save</button>
+        </form>
+
+    </div>
+
+    <script type="module">
+        // Listen for form submission
+        document.getElementById('settings-form').addEventListener('submit', function (event) {
+            // Prevent default form submission behavior
+            event.preventDefault();
+
+            // Get values from form fields
+            const notification = document.getElementById('notification').value;
+            const dashboard = document.getElementById('dashboard').value;
+            const timezone = document.getElementById('timezone').value;
+
+            // Save settings data (for demo purposes, we'll just log it)
+            console.log('Notification:', notification);
+            console.log('Dashboard:', dashboard);
+            console.log('Timezone:', timezone);
+
+            // Provide feedback to the user 
+            alert('Settings saved successfully!');
+            window.location.href = dashboard + '.html';
+            return false;
+        });    </script>
+
+</body>
 
 </html>

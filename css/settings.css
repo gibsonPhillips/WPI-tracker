@@ -1,0 +1,57 @@
+/* Reset default margin and padding */
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styles */
+#container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Header styles */
+h2 {
+    text-align: center;
+    color: #33567A;
+    margin-bottom: 20px;
+}
+
+/* Form label styles */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Form select styles */
+form select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* Save button styles */
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #33567A;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Save button hover effect */
+form button:hover {
+    background-color: #012D5A;
+    /* Darker blue on hover */
+}
